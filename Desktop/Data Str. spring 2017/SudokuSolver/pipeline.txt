@@ -1,0 +1,7 @@
+./generate_cnf.exe sudoku_samples/sample02_puz.txt cnf.txt
+./minisat.exe cnf.txt solution.txt
+./output_solution.exe solution.txt output.txt
+
+./main.exe sudoku_samples/sample02_puz.txt output.txt
+
+./generate_cnf.exe sudoku_samples/sample03_puz.txt cnf.txt && ./minisat.exe cnf.txt solution.txt || ./output_solution.exe solution.txt output.txt
